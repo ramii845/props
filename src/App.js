@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Profile from './Profil/Profile';
 
 function App() {
+  const data=[
+    {
+      FullName:"Rami",
+      Bio:"man",
+      Profession:"Student",
+    },
+    {
+      FullName:"Karim",
+      Bio :"man",
+      Profession :"teacher",
+    },
+    {
+    FullName:"sahar",
+      Bio:"women",
+      Profession:"Student",
+    }
+  ]
+  const handClick=(name)=>alert(`le prenom est ${name}`)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile exemple={data} func={handClick}>
+        <img src="image.jfif"/>
+      </Profile>
     </div>
   );
 }
